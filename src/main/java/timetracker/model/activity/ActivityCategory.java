@@ -1,4 +1,4 @@
-package timetracker.structure;
+package timetracker.model.activity;
 import java.awt.Color;
 import java.util.Random;
 

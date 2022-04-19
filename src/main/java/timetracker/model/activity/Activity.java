@@ -1,4 +1,4 @@
-package timetracker.structure;
+package timetracker.model.activity;
 
 import java.time.LocalDateTime;
 //TODO right form of time. LocalDateTime or something else?
@@ -7,6 +7,7 @@ public class Activity implements IActivity {
 	private LocalDateTime startTime;
 	private int durationInMinutes;
 	private ActivityCategory category;
+	private boolean isPlanned; //separate planned activities from tracked activities. maybe separate list? TODO
 	
 	//static int totalMinutes per activity. Or maybe implement in the list.
 	

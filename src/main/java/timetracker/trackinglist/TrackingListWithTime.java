@@ -1,4 +1,4 @@
-package timetracker.structure;
+package timetracker.trackinglist;
 
 import java.util.Iterator;
 import java.time.LocalDateTime;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 //TODO add equals so that I can sum up all the minutes per activity.
 
 public class TrackingListWithTime<E> implements ITrackingList<E>{
-	private ArrayList<E> trackingList;
+	protected ArrayList<E> trackingList;
 	private int totalMinutesLogged;
 	
 	public TrackingListWithTime() {
@@ -70,29 +70,7 @@ public class TrackingListWithTime<E> implements ITrackingList<E>{
 	public int getResourceSpent() {
 		return totalMinutesLogged;
 	}
-	/*
-	public boolean isAfter(LocalDateTime timeToCheck, LocalDateTime time) {
-		if (timeToCheck.isAfter(time))
-			return true;
-		return false;
-	}
-	
-	public boolean isBefore(LocalDateTime timetoCheck, LocalDateTime time) {
-		if (timetoCheck.isBefore(time))
-			return true;
-		return false;
-	}
-	*/
-	//TODO create a more concrete activity tracking list
-	/*
-	public ArrayList<E> getElementsBetween(LocalDateTime start, LocalDateTime end) {
-		for (E element : this.trackingList) {
-			LocalDateTime activityStartTime = LocalDateTime.now();
-			
-		}
-	}
-	*/
-	
+		
 	class TrackingListIterator implements Iterator<E> {
 			private int currentIndex;
 			private int lastIndex;
