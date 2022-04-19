@@ -1,4 +1,4 @@
-package timetracker.trackinglist;
+package timetracker.structure;
 
 /** 
  * Defines the state and behaviour requirements

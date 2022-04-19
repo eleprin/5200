@@ -1,4 +1,4 @@
-package timetracker.trackinglist;
+package timetracker.structure;
 import java.awt.Color;
 import java.util.Random;
 

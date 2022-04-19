@@ -1,4 +1,4 @@
-package timetracker.trackinglist;
+package timetracker.structure;
 
 import java.time.LocalDateTime;
 //TODO right form of time. LocalDateTime or something else?

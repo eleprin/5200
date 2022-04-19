@@ -1,4 +1,4 @@
-package timetracker.trackinglist;
+package timetracker.structure;
 
 import java.time.LocalDateTime;
 

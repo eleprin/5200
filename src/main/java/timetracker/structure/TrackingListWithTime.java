@@ -1,4 +1,4 @@
-package timetracker.trackinglist;
+package timetracker.structure;
 
 import java.util.Iterator;
 import java.time.LocalDateTime;
@@ -70,7 +70,7 @@ public class TrackingListWithTime<E> implements ITrackingList<E>{
 	public int getResourceSpent() {
 		return totalMinutesLogged;
 	}
-	
+	/*
 	public boolean isAfter(LocalDateTime timeToCheck, LocalDateTime time) {
 		if (timeToCheck.isAfter(time))
 			return true;
@@ -82,7 +82,7 @@ public class TrackingListWithTime<E> implements ITrackingList<E>{
 			return true;
 		return false;
 	}
-	
+	*/
 	//TODO create a more concrete activity tracking list
 	/*
 	public ArrayList<E> getElementsBetween(LocalDateTime start, LocalDateTime end) {
