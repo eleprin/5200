@@ -1,5 +1,6 @@
 package timetracker.model.activity;
 import java.awt.Color;
+import java.util.Objects;
 import java.util.Random;
 
 /**
@@ -32,6 +33,28 @@ public class ActivityCategory {
 		final float luminance = 0.9f;
 		final Color color = Color.getHSBColor(hue, saturation, luminance);
 		return color;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(color, name);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ActivityCategory other = (ActivityCategory) obj;
+		return Objects.equals(color, other.color) && Objects.equals(name, other.name);
+	}
+
+	@Override
+	public String toString() {
+		return "Category: " + name;
 	}
 
 }

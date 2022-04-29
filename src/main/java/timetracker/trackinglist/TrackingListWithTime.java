@@ -70,6 +70,10 @@ public class TrackingListWithTime<E> implements ITrackingList<E>{
 	public int getResourceSpent() {
 		return totalMinutesLogged;
 	}
+	
+	public void setResourceSpent(int amount) {
+		this.totalMinutesLogged += amount;
+	}
 		
 	class TrackingListIterator implements Iterator<E> {
 			private int currentIndex;
