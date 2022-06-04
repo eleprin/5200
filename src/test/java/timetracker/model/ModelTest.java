@@ -32,7 +32,7 @@ public class ModelTest {
 		list.add(act3);
 		
 		
-		int listSize = list.getActivitiesInTimeSegment(beforeListSegment, afterListSegment).size();
+		int listSize = list.getListOfActivitiesInTimeSegment(beforeListSegment, afterListSegment).size();
 		assertEquals(listSize, 3);
 		
 		
@@ -40,7 +40,7 @@ public class ModelTest {
 	}
 
 	@Test
-	public void getMinutesInTimeSegmentTest() {
+	public void getMinutesFromAllActivitiesInTimeSegmentTest() {
 		
 	ActivityTrackingList list = new ActivityTrackingList();
 	LocalDateTime beforeListSegment = LocalDateTime.now().minusDays(1);
@@ -59,8 +59,8 @@ public class ModelTest {
 	list.add(act3);
 	
 	int totalMinutesInSegment = 30;
-	ArrayList<Activity> listSegment = list.getActivitiesInTimeSegment(beforeListSegment, afterListSegment);
-	assertEquals(list.getMinutesInTimeSegment(listSegment), totalMinutesInSegment);
+	ArrayList<Activity> listSegment = list.getListOfActivitiesInTimeSegment(beforeListSegment, afterListSegment);
+	assertEquals(list.getTotalMinutesInTimeSegment(listSegment), totalMinutesInSegment);
 	
 	}
 }

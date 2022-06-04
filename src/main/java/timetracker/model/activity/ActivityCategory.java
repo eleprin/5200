@@ -14,15 +14,18 @@ import java.util.Random;
 public class ActivityCategory {
 	private String name;
 	private Color color;
+	private int minutes;
 	
 	public ActivityCategory(String name, Color color) {
 		this.name = name;
 		this.color = color;
+		this.minutes = 0;
 	}
 	
 	public ActivityCategory(String name) {
 		this.name = name;
 		this.color = getRandomColor();
+		this.minutes = 0;
 	}
 	
 	private Color getRandomColor() {

@@ -11,6 +11,7 @@ public class Activity implements IActivity {
 	private int durationInMinutes; //can be 0
 	private ActivityCategory category; // can be null
 	//private boolean isPlanned; //separate planned from unplanned. implement search in trackinglist. 
+	private TimeKeeper timekeeper;
 	
 	
 	
@@ -51,20 +52,12 @@ public class Activity implements IActivity {
 		return this.name;
 	}
 
-	@Override
-	public int getDurationInMinutes() {
-		return this.durationInMinutes;
-	}
 
 	@Override
 	public ActivityCategory getCategory() {
 		return this.category;
 	}
 
-	@Override
-	public LocalDateTime getStartTime() {
-		return this.startTime;
-	}
 	
 	public LocalDateTime getEndTime() {
 		return this.endTime;
@@ -100,6 +93,11 @@ public class Activity implements IActivity {
 	@Override
 	public String toString() {
 		return "Activity: " + name + ", duration: " + durationInMinutes;
+	}
+
+	@Override
+	public TimeKeeper getTimeKeeper() {
+		return this.timekeeper;
 	}
 
 }

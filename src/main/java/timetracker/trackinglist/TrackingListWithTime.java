@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class TrackingListWithTime<E> implements ITrackingList<E>{
 	protected ArrayList<E> trackingList;
-	private int totalMinutesLogged;
+	private int totalMinutesLogged; //if 0, may need to be calculated.
 	
 	public TrackingListWithTime() {
 		trackingList = new ArrayList<E>();

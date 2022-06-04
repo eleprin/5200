@@ -24,12 +24,12 @@ public interface IActivity {
 	public String getName();
 	
 	/**
-	 * get amount of minutes spent on actitivy.
-	 * Minutes because that's the smallest time unit
-	 * used in this project. 
-	 * @return minutes spend on activity.
+	 * get the TimeKeeper,
+	 * which handles the time aspect of the activity.
+	 * Duration in minutes, start and end time.
+	 * @return TimeKeeper, which holds the relevant time information.
 	 */
-	public int getDurationInMinutes();
+	public TimeKeeper getTimeKeeper();
 	
 	/**
 	 * Get the ActivityCategory of the Activity.
@@ -38,10 +38,6 @@ public interface IActivity {
 	 */
 	public ActivityCategory getCategory();
 	
-	/**
-	 * get start of activity. End time can be unknown at time of creation.
-	 * But there has to be some notion of when the activity starts.
-	 * * @return start time. Does not have to be specific to minute.
-	 */
-	public LocalDateTime getStartTime();
+	
 }
+
