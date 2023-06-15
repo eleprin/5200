@@ -9,6 +9,8 @@ import timetracker.model.activity.ActivityCategory;
 import timetracker.view.TimeTrackerViewable;
 
 public class TimeTrackerModel implements TimeTrackerViewable, TimeTrackerControllable{
+
+	//todo add list of categorie
 	
 	ActivityTrackingList fullList;
 	ArrayList<Activity> viewList;

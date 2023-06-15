@@ -11,6 +11,7 @@ import java.util.Random;
  * @author Daniel S. Wagner
  *
  */
+
 public class ActivityCategory {
 	private String name;
 	private Color color;
