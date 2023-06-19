@@ -71,12 +71,6 @@ public class Activity implements IActivity {
 		TimeKeeper newTimeKeeper = new TimeKeeper(startTime, endTime);
 		this.timekeeper = newTimeKeeper;
 	}
-	
-	public void setDurationInMinutes() throws NullPointerException {
-		Duration duration = Duration.between(this.startTime, this.endTime);
-		if (this.endTime != null)
-			this.durationInMinutes = duration.toMinutesPart();
-	}
 
 	@Override
 	public int hashCode() {
@@ -97,7 +91,7 @@ public class Activity implements IActivity {
 
 	@Override
 	public String toString() {
-		return "Activity: " + name + ", duration: " + durationInMinutes;
+		return "Activity: " + name + ", duration: " + this.timekeeper.getDurationInMinutes();
 	}
 
 	@Override
