@@ -11,46 +11,18 @@ package timetracker.trackinglist;
  * @param <E> elements that the list will hold
  */
 
-public interface ITrackingList<E> extends Iterable<E> {
-	/**
-	 * add a new element to end of list
-	 * @param element to be added
+public interface ITrackingList<E,R> extends Iterable<E> {
+
+	/** get all the elements that are held by the list.
+	 * Iterable to hide the list.
+	 * @return all elements
 	 */
-	void add(E element);
-	
+	Iterable<E> getElements();
+
 	/**
-	 * remove specified element
-	 * @param index of element to remove
+	 *
+	 * @return resource that's being tracked
 	 */
-	void remove(int index);
-	
-	/**
-	 * clear all elements
-	 */
-	void clear();
-	
-	/**
-	 * set activity. 
-	 * 
-	 * @param element to edit
-	 * @param index of element
-	 * @throws IndexOutOfBoundsException
-	 */
-	void set(int index, E element) throws IndexOutOfBoundsException;
-	
-	/**
-	 * get element at index location
-	 * @param index of list element
-	 * @return list element at location
-	 * @throws IndexOutOfBoundsException
-	 */
-	E get(int index) throws IndexOutOfBoundsException;
-	
-	/**
-	 * total amount of resource spent, e.g. minutes, money.
-	 * 
-	 * @return int representation of resource spent.
-	 */
-	int getResourceSpent();
+	R getResourceTracked();
 
 }

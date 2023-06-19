@@ -12,21 +12,23 @@ import java.util.Random;
  *
  */
 
+//todo enable choice of color. These things are really personal. Add color picker.
+
 public class ActivityCategory {
 	private String name;
 	private Color color;
-	private int minutes;
+	private int totalMinutes;
 	
 	public ActivityCategory(String name, Color color) {
 		this.name = name;
 		this.color = color;
-		this.minutes = 0;
+		this.totalMinutes = 0;
 	}
 	
 	public ActivityCategory(String name) {
 		this.name = name;
 		this.color = getRandomColor();
-		this.minutes = 0;
+		this.totalMinutes = 0;
 	}
 	
 	private Color getRandomColor() {
