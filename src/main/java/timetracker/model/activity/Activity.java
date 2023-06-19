@@ -67,7 +67,9 @@ public class Activity implements IActivity {
 	}
 	
 	public void setEndTime(LocalDateTime endTime) {
-		this.endTime = endTime;
+		LocalDateTime startTime = this.timekeeper.getStartTime();
+		TimeKeeper newTimeKeeper = new TimeKeeper(startTime, endTime);
+		this.timekeeper = newTimeKeeper;
 	}
 	
 	public void setDurationInMinutes() throws NullPointerException {
